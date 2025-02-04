@@ -1,0 +1,121 @@
+/* 基本レイアウト */
+body {
+  font-family: sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 60%;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+#status, #timer {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.question {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+/* フィードバック＋もどるボタンコンテナ */
+#feedbackContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* エラー選択用コンテナ */
+.error-container {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #d32f2f;
+  border-radius: 4px;
+  background-color: #ffebee;
+}
+
+.error-container p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+/* エラー選択ボタン */
+.error-btn {
+  background-color: #f44336;
+}
+
+.error-btn:hover {
+  background-color: #e53935;
+}
+
+/* もどるボタン */
+#backBtn {
+  background-color: #555;
+  margin-left: 20px;
+}
+
+#backBtn:hover {
+  background-color: #444;
+}
+
+/* 具体例表示専用エリア（フィードバックの下） */
+#exampleArea {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  background-color: #e3f2fd;
+  white-space: pre-wrap; /* 式ごとに改行 */
+}
+
+/* 小分類エラー選択項目のコンテナ */
+.option-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0.5rem 0;
+}

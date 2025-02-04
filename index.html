@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>算数アプリ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>算数アプリ</h1>
+    <!-- メニュー -->
+    <div id="menu">
+      <button id="additionBtn">たし算</button>
+      <button id="subtractionBtn">ひき算</button>
+    </div>
+    
+    <!-- クイズエリア -->
+    <div id="quiz" class="hidden">
+      <div id="status">
+        レベル: <span id="levelDisplay"></span>　
+        得点: <span id="scoreDisplay"></span>
+      </div>
+      
+      <!-- タイマー（タイムリミットがある場合のみ表示） -->
+      <div id="timer" class="hidden">
+        残り時間: <span id="timeDisplay"></span>秒
+      </div>
+      
+      <!-- 問題表示 -->
+      <div id="questionDisplay" class="question"></div>
+      
+      <!-- 回答入力 -->
+      <input type="text" id="answerInput" autocomplete="off" placeholder="答えを入力">
+      <button id="submitBtn">回答する</button>
+      
+      <!-- フィードバック＋もどるボタンコンテナ -->
+      <div id="feedbackContainer">
+        <div id="feedback"></div>
+        <!-- もどるボタンは JS で動的に追加 -->
+      </div>
+      
+      <!-- 具体例表示専用エリア（フィードバックの下） -->
+      <div id="exampleArea" class="hidden"></div>
+      
+      <!-- 第一段階エラー選択（大分類）【たし算のみ対象】 -->
+      <div id="errorSelection" class="error-container hidden">
+        <p>エラーを選択してください</p>
+        <button class="error-btn" id="error1">くりあがりみす</button>
+        <button class="error-btn" id="error2">ぼんみす</button>
+        <button class="error-btn" id="error3">じがきたないみす</button>
+      </div>
+      
+      <!-- 第二段階エラー選択（小分類）【たし算のみ対象】 -->
+      <div id="subErrorSelection" class="error-container hidden"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
